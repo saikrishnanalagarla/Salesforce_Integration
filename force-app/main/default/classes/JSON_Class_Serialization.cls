@@ -42,13 +42,13 @@ public with sharing class JSON_Class_Serialization {
     }    
     public static void serializesuppressApexObjectNulls(){
         // Create an instance of the Product class
-        Product myProduct = new Product('Laptop', 999.99, null, 20);
+       // Product myProduct = new Product('Laptop', 999.99, null, 20);
 
         // Serialize the product to JSON, suppressing null values
-        String jsonString = JSON.serialize(myProduct, true);
+        //String jsonString = JSON.serialize(myProduct, true);
 
         // Output the JSON string
-        System.debug(jsonString);
+        //System.debug(jsonString);
         //Output {"name":"Laptop","price":999.99,"stockQuantity":20}
     }
     public static void serializePretty(){
@@ -56,7 +56,5 @@ public with sharing class JSON_Class_Serialization {
         List<Account> accounts = [SELECT Id, Name, Phone, Industry FROM Account LIMIT 5];
         String jsonString = JSON.serializePretty(accounts);
         System.debug(jsonString);
-
     }
-
 }
